@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1EY3hNREU1TURFek5Wb1hEVEk1TURjd056RTVNREV6TlZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTUNYCndFTjFWTUVYYUNia251ZCtqK1FCMm5LS0tKRFBaUGtzZisvOENaZWtkZWRDYlhDZTg4b0p4VUdkOU9BbzVwN2QKTmJGdmtqZFJrVEgrMmVUUTNkQUdXU212dTZmdk84QjRhenFmSWZHcGhoSkF1Y0FVMTNKLzIwSW1zMSt5WGZqaQpNWk9wUG5PQzRrb0NMUHgrWVhPRTdrVXlaTmF2ZnpIV2FuOHdvRUZ2TFVObjM3VFhoK3NGSDZNbWVjWkg2Z3BVCkthZWk0M2tjMi9yRG8zZWlmVEJrMFpOOWY1KzJWVFRWWlBaK1hQTWIwa2N5TjZjTWRhcG5pZTl0TFR6ZWwwZmQKWi9ucks2MG9zWTJ6MWhxdWU1RGdVVG5DanhVTFN2ajFNTVhTVkJ6b084SzlneFlVWHliUVltendzM0RmbXdqbwpMajRadHVzeUJaSWRVbzhGRDYwQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFCOGV2eE9zbUE0Zk8vTzZYQm1FZk9MWnB2ODYKR3JwdnRicWpZdnMrdmZYRTBHakdDaXFMWkNua1R3SzRCaWo0OTJ3alNQNVhCTzdmK2hET1RwcGlYRU0xYWR4UQo4VmFPWnZISkNjZVNFMmRNQXh4WUljM01FVHh4ZDlkWFpQakNFWURIZ3Vod1dDOGRIVUNaSzV3aEY4TXhHL3dnCm5UTnRBTjZ5OXJoTnhhdUh3cTlmbzRMQmh0T0E0UHpid0xMUUNHa2Q4cHJXOHVEei9HV1FVYWZRcml1Ump0MWYKK2tZZi9oMU55TkVHc25ENjNveUJKWUZwbEhGSG1kOGFaZ0Q1N001bVBVcU9LdTFVd2VCaDYrdGVNbU4zZUhIRApSemhYMWhtSFVncUlWeE15ZWFLRGI3UWE4N1ZRRVlPVU5jZm5BNWZOeG5WVjNDRXdDd01oemxFOEdLaz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://FA4F536E389F180089302EDAC463E7A5.sk1.us-west-2.eks.amazonaws.com
+  name: arn:aws:eks:us-west-2:280841528621:cluster/lando-cluster02-k
+contexts:
+- context:
+    cluster: arn:aws:eks:us-west-2:280841528621:cluster/lando-cluster02-k
+    user: arn:aws:eks:us-west-2:280841528621:cluster/lando-cluster02-k
+  name: arn:aws:eks:us-west-2:280841528621:cluster/lando-cluster02-k
+current-context: arn:aws:eks:us-west-2:280841528621:cluster/lando-cluster02-k
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-west-2:280841528621:cluster/lando-cluster02-k
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - us-west-2
+      - eks
+      - get-token
+      - --cluster-name
+      - lando-cluster02-k
+      command: aws
